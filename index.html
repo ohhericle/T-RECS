@@ -254,16 +254,17 @@
             <br>
             <div class="row content">
                 <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
-                    <h3 style="margin-top: 25px">Yelp Dataset</h3>
+                    <h3 style="margin-top: 25px">Yelp Dataset & Github Dataset</h3>
                     <p>
-                        This dataset contains aggregated responses from the Medical Board of California and Osteopathic Board of California physician 
-                        survey incorporated into the license renewal process. 
+                        The Yelp dataset contains subset of Yelp's businesses, reviews, and user data. We had to map business ids back to business names and 
+                        narrow down the yelp dataset to oncologists based on reviews.
 
+                        <p> The Github repository contains data and scripts pertaining to work done by Avijit Thawani while at Northeastern University (summer 2018) under the guidance of 
+                        Dr. Byron C. Wallace (College of Computer and Information Science, Northeastern University, Boston, MA). </p>
 
                     </p>
                     <p>
-                        The dataset is limited to physicians whose license was in “Current” or 
-                        “License Renewal Fees Paid” status on a specified date.
+                        
                     </p>
                     <a href="https://data.chhs.ca.gov/dataset/physician-survey" class="btn-learn-more" style="color: #FD97D2;; border-color: #FD97D2" target="_blank">Learn more about Data.CHHS.Gov</a>
                 </div>
@@ -305,7 +306,7 @@
                         </p>
                         <h5> Results/Conclusion </h5>
                         <p>
-                            As you can see from the figure, the Linear Regression model follows the general trend of actual blood glucose values (shown as blue line), but is unable to accurately predict the blood glucose level. Without an accurate blood glucose value to make decisions on, diabetics would not be able to utilize, or even trust this type of model, thus we move on to more advanced models.
+                            ...
                         </p>
                     </div>
                     <div class='col-lg-6 pt-4 pt-lg-0' data-aos="fade-up" data-aos-delay="300">
@@ -343,13 +344,13 @@
                 <br>
                 <div class="row content">
                     <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
-                        <h3>Random Forest</h3>
+                        <h3>Sentiment Analysis</h3>
                         <p>
-                            Here we look at a model named Random Forest. This model takes more complex approach to prediction unlike the ARIMAX model we described above. The Random Forest model includes the last 12 blood glucose entries, as well as the last 12 insulin and carb entries for its prediction. The model, like ARIMAX, also attempts to predict blood glucose over the next 8 hour period. The data used for this model is from a randomly sampled subject.
+                            ...
                         </p>
                         <h5> Results/Conclusion </h5>
                         <p>
-                            As shown in the figure (line shown in green), the Random Forest model follows the trend of actual blood glucose more closely than ARIMAX. It is safe to say that Random Forest is able to accurately predict blood glucose. While the model is accurate, there are points of which inaccurate spike occur but those are quickly corrected.
+                            ...
                         </p>
 
                     </div>
@@ -388,13 +389,13 @@
                 <br>
                 <div class="row content">
                     <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
-                        <h3>LSTM Model</h3>
+                        <h3>Top 5 Best Match by Distance & Rating</h3>
                         <p>
-                            Similarly to the Random Forest model, our LSTM model using the last 12 blood glucose entries, as well as the last 12 insulin and carb entries to predict blood glucose levels. Like ARIMAX and Random Forest, this model attempts to predict blood glucose over the next 8 hour period. The data used for this model is from a randomly sampled subject.
+                             ...
                         </p>
                         <h5> Results/Conclusion </h5>
                         <p>
-                            As you can see in the Predicted LSTM figure (line colored in red), the LSTM model follows the trend of actual blood glucose levels very well and is able to accurately predict blood glucose levels. One of the key differences between Random Forest and LSTM is its stability. As you can see in the figure, LSTM has less deviation, or spikes, from the actual blood glucose. But generally, Random Forest and LSTM are quite similar.
+                            ...
                         </p>
 
                     </div>
@@ -440,7 +441,6 @@
             <div>
                 <h3><b>Conclusions</h3></b>
                 <p>
-                    Random Forest and LSTM models provide the best results for accurately predicting blood glucose values. 
                     While this website provides a simplified overview of our models, we recommend taking a look at our for more details into all of our project work!
                 </p>
             </div>
