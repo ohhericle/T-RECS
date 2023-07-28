@@ -135,7 +135,7 @@
                     <h4 style="text-align: center">Cancer deaths in the U.S. in 2020</h4>
                     <a href="https://www.britannica.com/science/cancer-disease/Effects-of-tumours-on-the-individual"
                        class="btn-learn-more" style="color: #FD97D2;; border-color: #FD97D2" target="_blank">Learn More about Tumors</a>
-                       <img src="assets/img/tumor3.png" class="hero-img" alt="" style="margin: 50px 0px 0px 100px;">
+                       <img src="assets/img/tumor2.gif" class="hero-img" alt="" style="margin: 50px 0px 0px 0px;">
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
                     <h3>Different Type of Tumors</h3>
@@ -257,10 +257,14 @@
                     <h3 style="margin-top: 25px">Yelp Dataset & Github Dataset</h3>
                     <p>
                         The Yelp dataset contains subset of Yelp's businesses, reviews, and user data. We had to map business ids back to business names and 
-                        narrow down the yelp dataset to oncologists based on reviews.
+                        narrow down the yelp dataset to oncologists based on reviews. Contains business id, business name, address, city, state, zip code, latitude/longitude, and categories for each review.
+                        Also provides json with review ids, user id, business id, review text, and date.
+  
+
 
                         <p> The Github repository contains data and scripts pertaining to work done by Avijit Thawani while at Northeastern University (summer 2018) under the guidance of 
-                        Dr. Byron C. Wallace (College of Computer and Information Science, Northeastern University, Boston, MA). </p>
+                        Dr. Byron C. Wallace (College of Computer and Information Science, Northeastern University, Boston, MA). Contains id, review, physician specialty, physician gender, physician name concatenated with city and state
+                    </p>
 
                     </p>
                     <p>
@@ -279,6 +283,7 @@
                         <li><i class="ri-database-2-fill" style="color:#FD97D2"></i>Latitude (of Medical Pratice)</li>
                         <li><i class="ri-database-2-fill" style="color:#FD97D2"></i>Longitude (of Medical Pratice)</li>
                         <li><i class="ri-database-2-fill" style="color:#FD97D2"></i>Distance (from Zip Code Center to Pratice)</li>
+                        <li><i class="ri-database-2-fill" style="color:#FD97D2"></i>Years of Experience (from Graduation)</li>
                         <li><i class="ri-database-2-fill" style="color:#FD97D2"></i>Compound Score (Sentiment Analysis of Yelp Reviews)</li>
                     </ul>
                 </div>
@@ -302,11 +307,15 @@
                     <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
                         <h3>Top 5 Best Match by Distance & Rating</h3>
                         <p>
-                            ...
+                            A number of Machine Learning Algorithms - Supervised or Unsupervised, use Distance Metrics to know the input data pattern in order to make any Data Based decision.
+                             A good distance metric helps in improving the performance of Classification, Clustering and Information Retrieval process significantly.
+                             <a href="https://medium.com/analytics-vidhya/role-of-distance-metrics-in-machine-learning-e43391a6bf2e"
+                       class="btn-learn-more" style="color: #FD97D2;; border-color: #FD97D2" target="_blank">Learn More about Distance Metrics</a>
                         </p>
-                        <h5> Results/Conclusion </h5>
+                        <h5> Our Approach </h5>
                         <p>
-                            ...
+                            Combine review scores for an overall score. Calculate centroid of zip codes. 
+                            Calculate distance in miles from centroid to medical practice. Merge doctor information and review scores on address coordinates.
                         </p>
                     </div>
                     <div class='col-lg-6 pt-4 pt-lg-0' data-aos="fade-up" data-aos-delay="300">
@@ -341,19 +350,29 @@
                     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
                     vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script> -->
                 </div>
+                
                 <br>
                 <div class="row content">
                     <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
                         <h3>Sentiment Analysis</h3>
                         <p>
-                            ...
+                            Sentiment analysis (or opinion mining) is a natural language processing (NLP) technique used to determine whether data is positive, negative or neutral. 
+                            Sentiment analysis is often performed on textual data to help businesses monitor brand and product sentiment in customer feedback, and understand customer needs.<br>
+                            <a href="https://monkeylearn.com/sentiment-analysis/"
+                       class="btn-learn-more" style="color: #FD97D2;; border-color: #FD97D2" target="_blank">Learn More about Sentiment Analysis</a>
                         </p>
-                        <h5> Results/Conclusion </h5>
+                        <h5> Our Approach </h5>
                         <p>
-                            ...
-                        </p>
+                            Gathered oncologist reviews from Yelp Academic dataset and RateMds Github dataset. 
+                            Ran VADER sentiment analysis model - open source model specifically used for analyzing 
+                            social media text that doesn’t require any training data. Limitations: only works for English text
+                            Calculated compound review score - normalized weighted composite score for each review.
+                            
 
+                        </p>
+                    <br>
                     </div>
+
                     <div class='col-lg-6 pt-4 pt-lg-0' data-aos="fade-up" data-aos-delay="300">
                     <img src="assets/img/random.gif" class="hero-img" alt="">
                         <!-- style='position: relative'>
@@ -391,9 +410,15 @@
                     <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
                         <h3>HBDScan</h3>
                         <p>
-                             ...
+                            HDBSCAN - Hierarchical Density-Based Spatial Clustering of Applications with Noise. Performs DBSCAN over varying epsilon values and integrates the result to find a clustering that gives the best stability over epsilon. This allows HDBSCAN to find clusters of varying densities (unlike DBSCAN), and be more robust to parameter selection.<br>
+
+                            <br>In practice this means that HDBSCAN returns a good clustering straight away with little or no parameter tuning -- and the primary parameter, minimum cluster size, is intuitive and easy to select.</br>
+                            
+                            <br>HDBSCAN is ideal for exploratory data analysis; it's a fast and robust algorithm that you can trust to return meaningful clusters (if there are any).</br>
+                            <a href="https://hdbscan.readthedocs.io/en/latest/"
+                       class="btn-learn-more" style="color: #FD97D2;; border-color: #FD97D2" target="_blank">Learn More about HDBScan</a>
                         </p>
-                        <h5> Results/Conclusion </h5>
+                        <h5> Our Approach </h5>
                         <p>
                             ...
                         </p>
@@ -439,14 +464,14 @@
     <section id="all_models" class="about">
         <div class="container">
             <div>
-                <h3><b>Conclusions</h3></b>
+                <h3><b>Architecture</h3></b>
                 <p>
-                    While this website provides a simplified overview of our models, we recommend taking a look at our for more details into all of our project work!
+                    
                 </p>
             </div>
             <br>
             <div class='tableauPlaceholder' data-aos="fade-up">
-            <center><img src="assets/img/rec.png" class="hero-img" alt=""></center>
+            <center><img src="assets/img/arch1.png" class="hero-img" alt=""></center>
             <br></br>
                 <!-- style='position: absolute; margin: auto; width: 800px; height: 525px'>
                 <noscript><a href='#'><img alt='Models '
@@ -489,14 +514,17 @@
         </div>
         <div class="container">
             <div>
-                <h3><b>Architecture</h3></b>
+                <h3><b>Next Steps</h3></b>
                 <p>
-                      
+                    Although our project focuses primarily on Tumors, we can see the impact it could have in other areas of medicine.
+                    We also want to update our website using real-time-data and create a mobile application for users.
                 </p>
             </div>
             <br>
             <div class='tableauPlaceholder' data-aos="fade-up">
-            <center><img src="assets/img/arch1.png" class="hero-img" alt=""></center>
+            <img src="assets/img/tumor4.png" class="hero-img" alt="" style="margin-left: 50px">
+            <img src="assets/img/tumor3.png" class="hero-img" alt="" >
+            <img src="assets/img/tumor5.png" class="hero-img" alt="">
             <!-- <right><img src="assets/img/arch.jpg" class="hero-img" alt=""></right> -->
         </div>
     </section>
