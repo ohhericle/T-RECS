@@ -1633,3 +1633,15 @@ section {
 #footer .footer-links a:hover {
   color: #4A8BCA;
 }
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
