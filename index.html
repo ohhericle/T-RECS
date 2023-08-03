@@ -122,7 +122,7 @@
 
                     </p>
                     <p>
-                        The availability of a recommendation system would centralize relevant information, making it easier for patients to make informed decisions.
+                        Our recommendation system centralizes relevant information, making it easier for patients to make informed decisions.
                         Tumor conditions often require prompt medical attention and treatment. Having a recommendation system that can 
                         quickly connect patients with suitable doctors and specialists can not only help reduce delays and ensure timely access to appropriate
                         care but also greatly enhance the overall patient experience.
@@ -138,7 +138,7 @@
                        <img src="assets/img/tumor2.gif" class="hero-img" alt="" style="margin: 50px 0px 0px 0px;">
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
-                    <h3>Different Type of Tumors</h3>
+                    <h3>Information About Tumors</h3>
                     <p>
                         A tumor is a mass or group of abnormal cells that form in the body. If you have a tumor, it isn’t necessarily cancer. 
                         Many tumors are benign (not cancerous).Tumors can form throughout the body. They can affect bone, skin, tissues, glands and organs. 
@@ -186,7 +186,7 @@
                     <h4 style="text-align: center; font-style: italic">Our mission is to empower individuals dealing with tumors by providing a personalized and comprehensive tumor
                          recommendation system. Through machine learning and targeted recommendations, we aim to 
                          simplify the process of finding and connecting with the most suitable doctors and specialists. By delivering transparency, personalized care, 
-                         and informed decision-making, we strive to improve treatment outcomes and enhance the overall well-being of our users.</h4>
+                         and informed decision-making, we strive to improve treatment outcomes and enhance the overall well-being of tumor patients.</h4>
                 </div>
             </div>
         </div>
@@ -256,21 +256,22 @@
                 <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
                     <h3 style="margin-top: 25px">Yelp Dataset & Github Dataset</h3>
                     <p>
-                        The Yelp dataset contains subset of Yelp's businesses, reviews, and user data. We mapped business ids back to business names and 
-                        narrowed down the yelp dataset to oncologists based on reviews. The dataset contains business id, business name, address, city, state, zip code, latitude/longitude, and categories for each review.
-                        The dataset also provides a json with review ids, user id, business id, review text, and date.
+                        The Yelp dataset contains subset of Yelp's businesses, reviews, and user data. We mapped business IDs back to business names and 
+                        narrowed down the yelp dataset to oncologists based on reviews. The dataset includes business IDs, business names, addresses, cities, states, zip codes, latitude/longitude, and categories for each review.
+                        The dataset also includes a json file with review IDs, user IDs, business IDs, review text, and date.
   
 
 
                         <p> The Github repository contains data and scripts pertaining to work done by Avijit Thawani while at Northeastern University (summer 2018) under the guidance of 
-                        Dr. Byron C. Wallace (College of Computer and Information Science, Northeastern University, Boston, MA). The dataset contains id, review, physician specialty, physician gender, physician name concatenated with city and state. 
+                        Dr. Byron C. Wallace (College of Computer and Information Science, Northeastern University, Boston, MA). The dataset contains IDs, reviews, physicians specialties, physicians genders, and physicians names concatenated with city and state. 
                     </p>
 
                     </p>
                     <p>
                         
                     </p>
-                    <a href="https://data.chhs.ca.gov/dataset/physician-survey" class="btn-learn-more" style="color: #FD97D2;; border-color: #FD97D2" target="_blank">Learn more </a>
+                    <a href="https://www.yelp.com/dataset" class="btn-learn-more" style="color: #FD97D2;; border-color: #FD97D2" target="_blank">Yelp Dataset </a>
+                    <a href="https://github.com/avi-jit/RateMDs" class="btn-learn-more" style="color: #FD97D2;; border-color: #FD97D2" target="_blank">Github Dataset </a>
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
                     <h3 style="margin-top: 25px">Key Features</h3>
@@ -305,21 +306,25 @@
             <div class="container">
                 <div class="row content">
                     <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
-                        <h3>Top 5 Best Match by Distance & Rating</h3>
+                        <h3>Sentiment Analysis</h3>
                         <p>
-                            A number of Machine Learning Algorithms - Supervised or Unsupervised, use Distance Metrics to know the input data pattern in order to make any Data Based decision.
-                             A good distance metric helps in improving the performance of Classification, Clustering and Information Retrieval process significantly.
-                             <a href="https://medium.com/analytics-vidhya/role-of-distance-metrics-in-machine-learning-e43391a6bf2e"
-                       class="btn-learn-more" style="color: #FD97D2;; border-color: #FD97D2" target="_blank">Learn More about Distance Metrics</a>
+                            Sentiment analysis (or opinion mining) is a natural language processing (NLP) technique used to determine whether data is positive, negative or neutral. 
+                            Sentiment analysis is often performed on textual data to help businesses monitor brand and product sentiment in customer feedback, and understand customer needs.<br>
+                             <a href="https://monkeylearn.com/sentiment-analysis/"
+                       class="btn-learn-more" style="color: #FD97D2;; border-color: #FD97D2" target="_blank">Learn More about Sentiment Analysis</a>
                         </p>
                         <h5> Our Approach </h5>
                         <p>
-                            Combine review scores for an overall score. Calculate centroid of zip codes. 
-                            Calculate distance in miles from centroid to medical practice. Merge doctor information and review scores on address coordinates.
+                            <b><i>1.</i></b> Gathered oncologist reviews from Yelp Academic dataset and RateMds Github dataset. <br>
+                            <b><i>2.</i></b> Ran VADER sentiment analysis model - open source model specifically used for analyzing
+                            social media text that doesn’t require any training data. 
+                            Limited to only English text.<br>
+                            <b><i>3.</i></b> Calculated compound review score - normalized weighted composite score for each review.
                         </p>
+                        <br>
                     </div>
                     <div class='col-lg-6 pt-4 pt-lg-0' data-aos="fade-up" data-aos-delay="300">
-                        <img src="assets/img/neural.gif" class="hero-img" alt="">
+                        <img src="assets/img/random.gif" class="hero-img" alt="" style="margin: 20px 0px 0px 0px;">
                         <!-- style='position: relative'>
                         <noscript><a href='#'><img alt='Predicted ARIMAX '
                                                    src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;bg&#47;bg-predict&#47;Predict_ARIMAX&#47;1_rss.png'
@@ -354,27 +359,31 @@
                 <br>
                 <div class="row content">
                     <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
-                        <h3>Sentiment Analysis</h3>
+                        <h3>Top 5 Best Match by Distance, Rating, and Years of Experience</h3>
                         <p>
-                            Sentiment analysis (or opinion mining) is a natural language processing (NLP) technique used to determine whether data is positive, negative or neutral. 
-                            Sentiment analysis is often performed on textual data to help businesses monitor brand and product sentiment in customer feedback, and understand customer needs.<br>
-                            <a href="https://monkeylearn.com/sentiment-analysis/"
-                       class="btn-learn-more" style="color: #FD97D2;; border-color: #FD97D2" target="_blank">Learn More about Sentiment Analysis</a>
+                            Feature Selection is the method of reducing the input variable to your model by using only relevant data and getting rid of noise in data. 
+                            It is the process of automatically choosing relevant features for your machine learning model based on the type of problem you are trying to solve. 
+                            We do this by including or excluding important features without changing them. It helps in cutting down the noise in our data and reducing the size of our input data.<br>
+                            <br>Feature selection models are of two types: 
+                            <li>Supervised Models: Supervised feature selection refers to the method which uses the output label class for feature selection. They use the target variables to identify the variables which can increase the efficiency of the model. </li>
+                            <li>Unsupervised Models: Unsupervised feature selection refers to the method which does not need the output label class for feature selection. We use them for unlabelled data.</li>
+                            <a href="https://www.simplilearn.com/tutorials/machine-learning-tutorial/feature-selection-in-machine-learning"
+                       class="btn-learn-more" style="color: #FD97D2;; border-color: #FD97D2" target="_blank">Learn More about Feature Selection</a>
                         </p>
                         <h5> Our Approach </h5>
                         <p>
-                            Gathered oncologist reviews from Yelp Academic dataset and RateMds Github dataset. 
-                            Ran VADER sentiment analysis model - open source model specifically used for analyzing 
-                            social media text that doesn’t require any training data. Limitations: only works for English text
-                            Calculated compound review score - normalized weighted composite score for each review.
-                            
+                            <b><i>1.</i></b> Individuals have reviews and their practices also have reviews. Combine their review scores to create an overall score.<br>
+                            <b><i>2.</i></b> Merge doctor information and review scores on address.<br>
+                            <b><i>3.</i></b> Not all zip codes may have an oncologist. Expand zip code search to neighboring +/- 10 zip codes.<br>
+                            <b><i>4.</i></b> Use the zip code centroid coordinates to calculate distance to medical practice from the center of the zip code.<br>
+                            <b><i>5.</i></b> Based on user preferences, sort distance results accordingly (e.g. if the user's highest to lowest preference is distance, score, years of experience then sort in that order).
 
                         </p>
                     <br>
                     </div>
 
                     <div class='col-lg-6 pt-4 pt-lg-0' data-aos="fade-up" data-aos-delay="300">
-                    <img src="assets/img/random.gif" class="hero-img" alt="" style="margin: 50px 0px 0px 0px;">
+                    <img src="assets/img/neural.gif" class="hero-img" alt="" style="margin: 150px 0px 0px 0px;">
                         <!-- style='position: relative'>
                         <noscript><a href='#'><img alt='Predicted Random Forest '
                                                    src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;bg&#47;bg-predict&#47;Predict_RandomForest&#47;1_rss.png'
@@ -408,7 +417,7 @@
                 <br>
                 <div class="row content">
                     <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
-                        <h3>HBDScan</h3>
+                        <h3>HDBScan</h3>
                         <p>
                             HDBSCAN - Hierarchical Density-Based Spatial Clustering of Applications with Noise. Performs DBSCAN over varying epsilon values and integrates the result to find a clustering that gives the best stability over epsilon. This allows HDBSCAN to find clusters of varying densities (unlike DBSCAN), and be more robust to parameter selection.<br>
 
@@ -420,16 +429,17 @@
                         </p>
                         <h5> Our Approach </h5>
                         <p>
-                            Transform the space according to the density/sparsity.
-                            Build the minimum spanning tree of the distance weighted graph.
-                            Construct a cluster hierarchy of connected components.
-                            Condense the cluster hierarchy based on minimum cluster size.
-                            Extract the stable clusters from the condensed tree.
+                            <b><i>1.</i></b> Using the merged data from above, convert gender to a number for the HDBSCAN model. Also map the review scores, which were previously from -1 to 1, to 1 to 5 scale. If there is no review present, use a 0 value.<br>
+                            <b><i>2.</i></b> Cluster based on distance, score, years of experience, and gender. SPecify each cluster to have a minimum of 25 samples.<br>
+                            <b><i>3.</i></b> Not all zip codes may have an oncologist. Expand zip code search to neighboring +/- 10 zip codes.<br>
+                            <b><i>4.</i></b> Use the zip code centroid coordinates to calculate distance to medical practice from the center of the zip code.<br>
+                            <b><i>5.</i></b> Based on user preferences, sort HDBSCAN results accordingly (e.g. if the user's highest to lowest preference is distance, score, years of experience then sort in that order).
+
                         </p>
 
                     </div>
                     <div class='col-lg-6 pt-4 pt-lg-0' data-aos="fade-up" data-aos-delay="300">
-                        <img src="assets/img/rank.gif" class="hero-img" alt="" style="margin: 50px 0px 0px 50px;">
+                        <img src="assets/img/rank.gif" class="hero-img" alt="" style="margin: 70px 0px 0px 50px;">
                         <!-- style='position: relative'>
                         <noscript><a href='#'><img alt='Predicted LSTM '
                                                    src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;bg&#47;bg-predict&#47;Predicted_LSTM&#47;1_rss.png'
@@ -469,9 +479,34 @@
         <div class="container">
             <div>
                 <h3><b>Architecture</h3></b>
-                <p>
-                    
-                </p>
+                <div class="row">
+                    <div class="column">
+                       <h4>Yelp Sentiment Data Pipeline</h4>
+                       <li>Preprocess_yelp_data.py - clean_data/yelp_bid_reviews.csv</li>
+                         <li>Yelp_sentiment.py
+                    - sentiment_data/yelp_bid_review_sentiment.csv</li>
+                         <li>Yelp_post_sentiment_combiner.py
+                    - sentiment_data/yelp_bid_sent_name.csv</li>
+                        <li>Yelp_post_sentiment_combiner.py
+                    - sentiment_data/yelp_bid_sent_name.csv</li>
+                        <li>Generate_yelp_placekeys.py 
+                    - clean_data/final_yelp_dataset.csv </li>
+                    </div>
+                    <div class="column">
+                       <h4>Medical Provider Data Pipeline</h4>
+                       <li>Preprocess_provider_data.py
+                    - clean_data/oncologists.csv</li>
+                        <li>Generate_provider_placekeys.py
+                    - clean_data/placekey_oncologist_dataset.csv</li>
+                        <li>Generate_final_oncologist_dataset.py 
+                    - clean_data/final_oncologist_dataset.csv </li>
+                    </div>
+                    <div class="column">
+                       <h4>Data Combination Pipeline</h4>
+                       <li>Generate_final_trecs_dataset.py
+                    - final/trecs.csv</li>
+                    </div>
+                 </div>
             </div>
             <br>
             <div class='tableauPlaceholder' data-aos="fade-up">
@@ -520,7 +555,7 @@
             <div>
                 <h3><b>Next Steps</h3></b>
                 <p>
-                    Although our project focuses primarily on Tumors, we can see our project being applied to other areas of medicine.
+                    Although our recommendation system focuses primarily on tumors, we can see our project being applied to other areas of medicine & specialties.
                     Further down the line we wish to update our website using real-time-data and develop a mobile application to increase accessibility.
                 </p>
             </div>
@@ -570,7 +605,7 @@
                             </div>
                         </div>
                         <div class="member-info">
-                            <h4>Geet Samra</h4>
+                            <h4>Amangeet Kaur Samra</h4>
                             <p>aksamra@berkeley.edu</p>
                         </div>
                     </div>
@@ -586,7 +621,7 @@
                             </div>
                         </div>
                         <div class="member-info">
-                            <h4>Jash Sompalli</h4>
+                            <h4>Jashwanth Sompalli</h4>
                             <p>jashsompalli@berkeley.edu</p>
                         </div>
                     </div>
@@ -608,7 +643,7 @@
                 </div>
             </div>
             
-            <center><h2>Special Thanks to Dr.Fred Nugen and Dr.Alberto Todeschini</h2></center>
+            <center><h2>Special Thanks to Dr. Fred Nugen and Dr. Alberto Todeschini</h2></center>
         </div>
     </section><!-- End Team Section -->
     <!-- ======= Resources Section ======= -->
@@ -765,7 +800,7 @@
                         identified by a randomly generated identifier. From our review of the dataset, their is no data
                         point that can be utilized or reversed engineered to identify names, locations, or any other
                         identifiers from.<br>
-                        <br><a href="https://drive.google.com/file/d/1SBcv6qluNIIHPdVbmF1r-YKorzjTUczN/view?usp=sharing" style="color:#FD97D2;" target="_blank">Capstone Project Audit by Megan Martin</a>
+                        <br><a href="https://drive.google.com/file/d/1SBcv6qluNIIHPdVbmF1r-YKorzjTUczN/view?usp=sharing" style="color:#FD97D2;" target="_blank">Capstone Project Audit Conducted by Megan Martin</a>
                     </p>
                 </div>
             </div>
@@ -777,7 +812,7 @@
                 </div>
                 <div class="col-lg-7">
                     <p>
-                        Tumor patients: find specialists and doctors for their specific conditions.
+                        Our intended audience are tumor patients looking to find specialists and doctors for their specific conditions.
                     </p>
                 </div>
             </div>
@@ -808,8 +843,20 @@
                     </p>
                 </div>
             </div>
+
+            <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="500">
+                <div class="col-lg-5">
+                    <i class="ri-question-line" style="color:rgb(253, 151, 210)"></i>
+                    <h4>How can I trust these recommendations?</h4>
+                </div>
+                <div class="col-lg-7">
+                    <p>
+                        We preform sentiment analysis on Yelp reviews and reviews found on HealthGrades for a given doctor and medical practice.
+                    </p>
+                </div>
+            </div>
             
-            <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">    
+            <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="600">    
                 <div class="col-lg-5">
                     <i class="ri-question-line" style="color:rgb(253, 151, 210)"></i>
                     <h4>Are there any televant readings, market research, white papers, academic research (share title and link)?</h4>
@@ -818,6 +865,9 @@
                     <p>
                         <a href="https://doi.org/10.1038/s41598-023-27416-7" style="color:#FD97D2;" target="_blank">Kavalci, E., Hartshorn</a><br>
                         <a href="https://doi.org/10.1038/s41551-022-00898-y" style="color:#FD97D2;" target="_blank">Zhang A, Xing L, Zou J, Wu JC</a></br>
+                        <a href="https://aakashrkaku.github.io/files/yelp_report.pdf" style="color:#FD97D2;" target="_blank">Chaitra H, Sreyas M, Ravi T, Aakash K</a><br>
+                        <a href="http://cs229.stanford.edu/proj2014/Jason%20Ting,%20Swaroop%20Indra%20Ramaswamy,%20Yelp%20Recommendation%20System.pdf" style="color:#FD97D2;" target="_blank">Jason T, Swaroop R</a><br>
+                        <a href="https://escholarship.org/content/qt54f06509/qt54f06509_noSplash_215d2bfe1d14de8f5e645896aaa2b330.pdf?t=qbrc11" style="color:#FD97D2;" target="_blank">Jiancong S</a><br>
                     </p>
                 </div>
             </div>
