@@ -90,7 +90,7 @@
                 <h2 data-aos="fade-up" data-aos-delay="400">
                     In association with the Master's in Information and Data Science Program University of California Berkeley</h2>
                 <div data-aos="fade-up" data-aos-delay="800">
-                    <a href="http://54.147.42.55:5000/" class="btn-get-started scrollto" style="color: #FD97D2;; border-color: #FD97D2" target="_blank">Watch the Demo</a>
+                    <a href="http://54.147.42.55:5000/" class="btn-get-started scrollto" style="color: #FD97D2;; border-color: #FD97D2" target="_blank">Demo</a>
                 </div>
             </div>
             <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">
@@ -125,14 +125,16 @@
                         Our recommendation system centralizes relevant information, making it easier for patients to make informed decisions.
                         Tumor conditions often require prompt medical attention and treatment. Having a recommendation system that can 
                         quickly connect patients with suitable doctors and specialists can not only help reduce delays and ensure timely access to appropriate
-                        care but also greatly enhance the overall patient experience.
+                        care but also greatly enhance the overall patient experience.<br>
+                        <p>Unlike other recommendation systems, our system combines a unique feature called Placekey API along machine learning techniques to help patients make informed
+                            decisions based on the most current information. Our system can lead to continuous improvement in the accuracy and relevance of tumor recommendations. </p>
 
                     </p>
                     <p><i>According to the <a
                             href="https://www.cdc.gov/cancer/dcpc/research/update-on-cancer-deaths/index.htm#:~:text=Cancer%20was%20the%20second%20leading,females%20and%20317%2C731%20among%20males." style="color:#FD97D2;">Centers for 
                             Diease Control and Prevention </a></i></p>
                     <h1 style="text-align: center"><b>602,350+ </b></h1>
-                    <h4 style="text-align: center">Cancer deaths in the U.S. in 2020</h4>
+                    <h4 style="text-align: center">Cancer deaths in the U.S. in 2023</h4>
                     <a href="https://www.britannica.com/science/cancer-disease/Effects-of-tumours-on-the-individual"
                        class="btn-learn-more" style="color: #FD97D2;; border-color: #FD97D2" target="_blank">Learn More about Tumors</a>
                        <img src="assets/img/tumor2.gif" class="hero-img" alt="" style="margin: 50px 0px 0px 0px;">
@@ -254,16 +256,13 @@
             <br>
             <div class="row content">
                 <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
-                    <h3 style="margin-top: 25px">Yelp Dataset & Github Dataset</h3>
+                    <h3 style="margin-top: 25px">Yelp Dataset</h3>
                     <p>
                         The Yelp dataset contains subset of Yelp's businesses, reviews, and user data. We mapped business IDs back to business names and 
                         narrowed down the yelp dataset to oncologists based on reviews. The dataset includes business IDs, business names, addresses, cities, states, zip codes, latitude/longitude, and categories for each review.
                         The dataset also includes a json file with review IDs, user IDs, business IDs, review text, and date.
   
 
-
-                        <p> The Github repository contains data and scripts pertaining to work done by Avijit Thawani while at Northeastern University (summer 2018) under the guidance of 
-                        Dr. Byron C. Wallace (College of Computer and Information Science, Northeastern University, Boston, MA). The dataset contains IDs, reviews, physicians specialties, physicians genders, and physicians names concatenated with city and state. 
                     </p>
 
                     </p>
@@ -271,7 +270,7 @@
                         
                     </p>
                     <a href="https://www.yelp.com/dataset" class="btn-learn-more" style="color: #FD97D2;; border-color: #FD97D2" target="_blank">Yelp Dataset </a>
-                    <a href="https://github.com/avi-jit/RateMDs" class="btn-learn-more" style="color: #FD97D2;; border-color: #FD97D2" target="_blank">Github Dataset </a>
+                    <!-- <a href="https://github.com/avi-jit/RateMDs" class="btn-learn-more" style="color: #FD97D2;; border-color: #FD97D2" target="_blank">Github Dataset </a> -->
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
                     <h3 style="margin-top: 25px">Key Features</h3>
@@ -281,11 +280,11 @@
                     </p>
                     <ul>
                         <li><i class="ri-database-2-fill" style="color:#FD97D2"></i>Full Name (MD or DO Medical Professionals)</li>
-                        <li><i class="ri-database-2-fill" style="color:#FD97D2"></i>Latitude (of Medical Pratice)</li>
-                        <li><i class="ri-database-2-fill" style="color:#FD97D2"></i>Longitude (of Medical Pratice)</li>
-                        <li><i class="ri-database-2-fill" style="color:#FD97D2"></i>Distance (from Zip Code Center to Pratice)</li>
-                        <li><i class="ri-database-2-fill" style="color:#FD97D2"></i>Years of Experience (from Graduation)</li>
-                        <li><i class="ri-database-2-fill" style="color:#FD97D2"></i>Compound Score (Sentiment Analysis of Yelp Reviews)</li>
+                        <li><i class="ri-database-2-fill" style="color:#FD97D2"></i>Specialty (filtered for oncology)</li>
+                        <li><i class="ri-database-2-fill" style="color:#FD97D2"></i>Zip Code (from zip code center to practice)</li>
+                        <li><i class="ri-database-2-fill" style="color:#FD97D2"></i>Coordinates (latitude and longitude of medical practice)</li>
+                        <li><i class="ri-database-2-fill" style="color:#FD97D2"></i>Placekey (unique identifier for any address)</li>
+                        <li><i class="ri-database-2-fill" style="color:#FD97D2"></i>Score (sentiment analysis of ind. + business Yelp reviews)</li>
                     </ul>
                 </div>
 
@@ -555,8 +554,8 @@
             <div>
                 <h3><b>Next Steps</h3></b>
                 <p>
-                    Although our recommendation system focuses primarily on tumors, we can see our project being applied to other areas of medicine & specialties.
-                    Further down the line we wish to update our website using real-time-data and develop a mobile application to increase accessibility.
+                    Although our recommendation system focuses primarily on tumors, we can see our project being applied to other specialties.
+                    We want to incorporate more doctor reviews and further down the line update our website using real-time-data. Another opporunity is to develop a mobile application to increase accessibility.
                 </p>
             </div>
             <br>
@@ -839,7 +838,7 @@
                 </div>
                 <div class="col-lg-7">
                     <p>
-                        We plan to update the website using real-time-data and develop a mobile application.
+                        Expand recommendations to other specialties. Collect more doctor reviews. Open source review Engine (sentiment-analysis).
                     </p>
                 </div>
             </div>
