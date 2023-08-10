@@ -86,7 +86,7 @@
         <div class="row">
 
             <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                <h1 data-aos="fade-up">Tumor Treatment Recommendation System</h1>
+                <h1 data-aos="fade-up">Tumor Doctor Treatment Recommendation System</h1>
                 <h2 data-aos="fade-up" data-aos-delay="400">
                     In association with the Master's in Information and Data Science Program University of California Berkeley</h2>
                 <div data-aos="fade-up" data-aos-delay="800">
@@ -127,7 +127,7 @@
                         quickly connect patients with suitable doctors and specialists can not only help reduce delays and ensure timely access to appropriate
                         care but also greatly enhance the overall patient experience.<br>
                         <p>Unlike other recommendation systems, our system utilizes a unique feature called Placekey API along machine learning to help patients make informed
-                            decisions based on the most current information. By training on core key features we are able to improve the accuracy and relevance of tumor recommendations. </p>
+                            decisions based on the most current information. In addition to this, our system provides an aggregation of sentiment from all available reviews. By training on core key features we are able to improve the accuracy and relevance of tumor recommendations. </p>
 
                     </p>
                     <p><i>According to the <a
@@ -372,10 +372,11 @@
                         <h5> Our Approach </h5>
                         <p>
                             <b><i>1.</i></b> Individuals have reviews and their practices also have reviews. Combine their review scores to create an overall score.<br>
-                            <b><i>2.</i></b> Merge doctor information and review scores on address.<br>
-                            <b><i>3.</i></b> Not all zip codes may have an oncologist. Expand zip code search to neighboring +/- 10 zip codes.<br>
-                            <b><i>4.</i></b> Use the zip code centroid coordinates to calculate distance to medical practice from the center of the zip code.<br>
-                            <b><i>5.</i></b> Based on user preferences, sort distance results accordingly (e.g. if the user's highest to lowest preference is distance, score, years of experience then sort in that order).
+                            <b><i>2.</i></b> Locations are encoded by 9-character placekeys, a unique identifier for a physical place.<br>
+                            <b><i>3.</i></b> Merge doctor information and review scores on placekeys.<br>
+                            <b><i>4.</i></b> Not all zip codes may have an oncologist. Expand placekey comparison to fewer placekey characters and calculate distances from starting zip code to all matches.<br>
+                            <b><i>5.</i></b> Based on entered zip code user preferences, display top recommendations accordingly (e.g. if the user's highest to lowest preference is score, distance, years of experience then sort in that order).<br>
+                            <b><i>6.</i></b>Information including name, gender, years of experience, address, and phone number present key facts at a single glance.
 
                         </p>
                     <br>
